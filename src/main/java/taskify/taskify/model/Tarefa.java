@@ -39,10 +39,11 @@ public class Tarefa {
     @Column(columnDefinition = "TEXT")
     private String descricao;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "dataDeCriacao")
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataDeCriacao;
 
+    @Column(name = "dataDeConclusao")
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataDeConclusao;
 
